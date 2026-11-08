@@ -26,6 +26,7 @@ Standing requests for every page, applied one page at a time as its sample is bu
 - **Description.** Each pattern and recipe page needs a short description so readers know what to expect, alongside Problem and Solution. Include it in every page's corrections until all pages have one.
 - **Sample differences.** When the sample's code differs from the page's Unity tab (for example installed from a scene component instead of at startup), ask for a short note on the page saying the sample differs and why, and say the same in the sample's README.
 - **Unexplained code.** Flag types or lines in the Unity tab whose purpose isn't obvious (like an empty marker struct) and ask for a comment.
+- **Engine docs links.** Suggest links to the official docs for the engine APIs the example uses, in that engine's Engine notes bullet. Use unversioned Unity URLs (`https://docs.unity3d.com/ScriptReference/...`, `.../Manual/...`) and check each one returns 200 before suggesting it. Godot and Unreal links are for the docs session to add.
 - **Related concepts.** Suggest key terms the page should name, where they fit (for example "frame rate independence" on Game Loop).
 
 ## Project
