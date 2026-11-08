@@ -68,5 +68,6 @@ namespace GameDevPatterns.Patterns.GameLoop.WithPattern
 		}
 	}
 
+	// An empty marker type. The PlayerLoop identifies each step by a type: this one names the step in the Profiler, and lets you find or remove it later.
 	public struct GameSystemsUpdate { }
 }

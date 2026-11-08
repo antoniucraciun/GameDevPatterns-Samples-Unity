@@ -21,6 +21,13 @@ Keep the guidance short and concrete, and don't paste the page's code back: poin
 
 **Docs corrections.** While a pattern or recipe is being built, the user proofreads its docs page and tells you what needs to change. Collect those notes plus anything the sample revealed (Unity tab code that doesn't work as written, a missing pitfall). When the sample is done, send them to the docs session, currently **"Unity samples page modifications"** (find it with `ListAgents`, send with `SendMessage`): one message per page, each item marked *verified in the Editor* or *suggestion*, quoting the user's own words for their notes. Show the user the list before sending, and never edit `../GameDevPatterns` yourself.
 
+Standing requests for every page, applied one page at a time as its sample is built (Game Loop first):
+
+- **Description.** Each pattern and recipe page needs a short description so readers know what to expect, alongside Problem and Solution. Include it in every page's corrections until all pages have one.
+- **Sample differences.** When the sample's code differs from the page's Unity tab (for example installed from a scene component instead of at startup), ask for a short note on the page saying the sample differs and why, and say the same in the sample's README.
+- **Unexplained code.** Flag types or lines in the Unity tab whose purpose isn't obvious (like an empty marker struct) and ask for a comment.
+- **Related concepts.** Suggest key terms the page should name, where they fit (for example "frame rate independence" on Game Loop).
+
 ## Project
 
 - **Unity 6000.6.8f1**, URP, C# 9 (Unity's language version). Don't upgrade the editor in passing.
