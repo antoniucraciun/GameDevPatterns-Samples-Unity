@@ -19,6 +19,15 @@ When the user asks how to set up a pattern or recipe, answer with:
 
 Keep the guidance short and concrete, and don't paste the page's code back: point to it. When the user shares their code, review it against the docs page and these conventions: correctness first, then whether it still matches the page, then simplicity.
 
+**Docs corrections.** While a pattern or recipe is being built, the user proofreads its docs page and tells you what needs to change. Collect those notes plus anything the sample revealed (Unity tab code that doesn't work as written, a missing pitfall). When the sample is done, send them to the docs session, currently **"Unity samples page modifications"** (find it with `ListAgents`, send with `SendMessage`): one message per page, each item marked *verified in the Editor* or *suggestion*, quoting the user's own words for their notes. Show the user the list before sending, and never edit `../GameDevPatterns` yourself.
+
+Standing requests for every page, applied one page at a time as its sample is built (Game Loop first):
+
+- **Description.** Each pattern and recipe page needs a short description so readers know what to expect, alongside Problem and Solution. Include it in every page's corrections until all pages have one.
+- **Sample differences.** When the sample's code differs from the page's Unity tab (for example installed from a scene component instead of at startup), ask for a short note on the page saying the sample differs and why, and say the same in the sample's README.
+- **Unexplained code.** Flag types or lines in the Unity tab whose purpose isn't obvious (like an empty marker struct) and ask for a comment.
+- **Related concepts.** Suggest key terms the page should name, where they fit (for example "frame rate independence" on Game Loop).
+
 ## Project
 
 - **Unity 6000.6.8f1**, URP, C# 9 (Unity's language version). Don't upgrade the editor in passing.
@@ -55,6 +64,8 @@ Tools~/                            generator script (ignored by Unity)
 - **One assembly definition per `WithPattern` / `WithoutPattern` (or `WithPatterns` / `WithoutPatterns`) folder**, named and namespaced `GameDevPatterns.<Patterns|Recipes>.<Folder>.<WithPattern|WithoutPattern>`, e.g. `GameDevPatterns.Patterns.FixedTimestep.WithPattern`. If a folder name starts with a digit, prefix that segment with `_` (`_1000EnemiesAt60Fps`).
 - The two versions never reference each other. Both may reference `GameDevPatterns.Shared`. A recipe's WithPatterns version doesn't reference the pattern samples either: it contains its own copy of what it uses, as the recipe page does.
 - One scene per version, inside its folder, named after the folder: `FixedTimestepWithout.unity`, `FixedTimestepWith.unity`.
+- **A sample only runs in its own scene.** Every sample shares one project, so nothing may start globally: no `[RuntimeInitializeOnLoadMethod]` that installs systems, subscribes to events or creates objects, no PlayerLoop changes left behind, no `DontDestroyOnLoad` objects that outlive the sample. When a docs page installs something at startup, keep its install code but make it callable (`Install()` / `Uninstall()`), call it from a small component in the sample's scene (`OnEnable` / `OnDisable`), and add a comment saying a real game would install it at startup as the page shows. A `SubsystemRegistration` method that only resets statics is fine.
+- On-screen debug text must be readable on large monitors: scale `OnGUI` panels with the screen height (see the Game Loop sample), or use UI Toolkit with a Panel Settings scale mode.
 - **Match the docs.** Where the page has a `Unity (C#)` tab, the WithPattern code starts from that code: same type names, same members, same comments where they still apply. Add only the scene glue the page leaves out. If the tab's code doesn't work as written, keep the fix small, mark it with a comment, and list it in your summary as a docs correction. Where the page has no Unity tab, follow its Pseudocode section.
 - Both versions build the same feature, so the only difference a reader sees is the pattern. The "without" version is the code someone would reasonably write first, not a strawman.
 - When a sample is done, change its README's `Status:` line to say what it contains and which Unity version it was verified in.
