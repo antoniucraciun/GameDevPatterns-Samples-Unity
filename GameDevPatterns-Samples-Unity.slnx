@@ -1,5 +1,6 @@
 ﻿<Solution>
   <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="GameDevPatterns.Patterns.GameLoop.WithPattern.csproj" />
   <Project Path="GameDevPatterns.Tools.Editor.csproj" />
   <Project Path="Assembly-CSharp-Editor.csproj" />
 </Solution>
