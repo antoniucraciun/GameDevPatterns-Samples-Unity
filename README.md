@@ -28,12 +28,12 @@ FixedTimestep/
 
 Recipes use `WithoutPatterns/` and `WithPatterns/`, because a recipe combines several patterns. A few patterns have no meaningful "without" version (Game Loop, Lazy Initialization, Debug Draw, Automated Playtesting); their `WithoutPattern` README says why.
 
-`Assets/_Shared/` holds code that two or more samples use. `Tools~/` holds the script that generates the folders from the docs site's catalog (Unity doesn't import folders ending in `~`).
+`Assets/_Shared/` holds code that two or more samples use. `Assets/_Tools/` holds Editor tooling for this repo, such as the README Viewer. `Tools~/` holds the script that generates the folders from the docs site's catalog (Unity doesn't import folders ending in `~`).
 
 ## Opening a sample
 
 1. Install **Unity 6000.6.8f1** (Unity 6.6) with Unity Hub, and add this folder as a project. If you clone with Git, install [Git LFS](https://git-lfs.com) first: textures, audio, models and fonts are stored with LFS.
-2. Read the sample's page on the site (linked from its README).
+2. Open **Window > GameDevPatterns > README Viewer** and dock it next to the Inspector. Select any sample folder in the Project window to read its README, with working links. Then read the sample's page on the site (linked from the README).
 3. In the Project window, open the sample's `WithoutPattern` folder and its scene, press Play, and look for the problem the page describes.
 4. Do the same in `WithPattern`, and compare the two scripts side by side.
 

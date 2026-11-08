@@ -1,0 +1,16 @@
+{
+    "name": "GameDevPatterns.Tools.Editor",
+    "rootNamespace": "GameDevPatterns.Tools",
+    "references": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

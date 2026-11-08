@@ -4,6 +4,21 @@ Runnable Unity samples for the Game Dev Patterns docs site (https://antoniucraci
 
 Godot and Unreal sample repos will follow with the same layout, so keep names, folder structure and READMEs engine-neutral where that costs nothing.
 
+## How we work
+
+**The user writes the sample code. Claude guides.** Don't write or edit C# in sample folders (`Assets/Patterns`, `Assets/Recipes`, `Assets/_Shared`), scenes or prefabs unless the user explicitly asks for it in that chat. Repo tooling (`Tools~`, `Assets/_Tools`) is fine to change when asked.
+
+When the user asks how to set up a pattern or recipe, answer with:
+
+1. **The goal in one or two sentences**, from the docs page (read the page in `../GameDevPatterns/docs/`, don't paraphrase from memory).
+2. **The scene for each version**: the smallest setup that shows the problem (objects, components, what is on screen), and what the player or reader does in Play Mode.
+3. **The scripts for each version**: file names, class names, and what each one is responsible for. For WithPattern, name which types come straight from the page's `Unity (C#)` tab, and what glue the page leaves out. For WithoutPattern, describe the plain version someone would write first and where it should break.
+4. **Folder setup**: the assembly definitions (names below), scene names, and any `_Shared` code it needs or should start.
+5. **Packages and settings** it needs beyond what's installed, if any.
+6. **What to compare** between the two versions, and **how to check it works**: what to look for in Play Mode, the Console or the Profiler.
+
+Keep the guidance short and concrete, and don't paste the page's code back: point to it. When the user shares their code, review it against the docs page and these conventions: correctness first, then whether it still matches the page, then simplicity.
+
 ## Project
 
 - **Unity 6000.6.8f1**, URP, C# 9 (Unity's language version). Don't upgrade the editor in passing.
@@ -19,8 +34,11 @@ Assets/
   _Shared/                         code used by two or more samples (see its README)
   Patterns/<Category>/<Pattern>/   README.md, WithoutPattern/, WithPattern/
   Recipes/<Group>/<Recipe>/        README.md, WithoutPatterns/, WithPatterns/
+  _Tools/Editor/                   repo tooling for the Editor (README Viewer), not sample code
 Tools~/                            generator script (ignored by Unity)
 ```
+
+- **README Viewer** (`Window > GameDevPatterns > README Viewer`): renders the README of the folder selected in the Project window, with working links. It handles the Markdown the generated READMEs use (headings, lists, quotes, tables, code blocks, bold, italic, inline code, links); keep READMEs within that subset.
 
 - Folder names are the site's titles in PascalCase: `&` → `And`, `*` → `Star`, punctuation dropped, acronyms of three or more letters in Pascal case (`Fps`, `Npcs`, `Mvc`), two-letter ones upper case (`AI`, `UI`). Each README keeps the site slug, which is the real key.
 - Don't create or rename sample folders by hand. They come from the docs repo's `catalog.ts` and `recipes.ts`:
