@@ -23,7 +23,8 @@ Keep the guidance short and concrete, and don't paste the page's code back: poin
 
 Standing requests for every page, applied one page at a time as its sample is built (Game Loop first):
 
-- **Description.** Each pattern and recipe page needs a short description so readers know what to expect, alongside Problem and Solution. Include it in every page's corrections until all pages have one.
+- **Description.** Each pattern and recipe page needs a short `## Overview` section (between the Category line and `## Problem`) so readers know what to expect. Include it in every page's corrections until all pages have one. Game Loop has one.
+- **Sample link.** Once a sample is pushed to the samples repo's `main`, tell the docs session so it adds the `samples` entry (the page's "See it in action" link).
 - **Sample differences.** When the sample's code differs from the page's Unity tab (for example installed from a scene component instead of at startup), ask for a short note on the page saying the sample differs and why, and say the same in the sample's README.
 - **Unexplained code.** Flag types or lines in the Unity tab whose purpose isn't obvious (like an empty marker struct) and ask for a comment.
 - **Engine docs links.** Suggest links to the official docs for the engine APIs the example uses, in that engine's Engine notes bullet. Use unversioned Unity URLs (`https://docs.unity3d.com/ScriptReference/...`, `.../Manual/...`) and check each one returns 200 before suggesting it. Godot and Unreal links are for the docs session to add.
