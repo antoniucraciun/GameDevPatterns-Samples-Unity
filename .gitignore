@@ -73,3 +73,10 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# --- Added for GameDevPatterns-Samples-Unity ---
+# IDE folders and generated solution files (Unity 6 also writes .slnx)
+.idea/
+*.slnx
+# Node tooling in Tools~ (the generator has no dependencies, but just in case)
+/Tools~/node_modules/

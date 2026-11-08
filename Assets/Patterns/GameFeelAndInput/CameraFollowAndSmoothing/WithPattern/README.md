@@ -1,0 +1,8 @@
+# Camera Follow & Smoothing: with the pattern
+
+The same feature built with Camera Follow & Smoothing.
+
+Compare it with [WithoutPattern](../WithoutPattern/README.md): the behaviour that broke there should hold here, at the cost of the extra types the pattern adds.
+
+Status: not implemented yet.
+
