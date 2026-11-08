@@ -14,5 +14,3 @@ There is no "without" version of this one: Unity owns the game loop (the PlayerL
 2. Read [WithoutPattern](WithoutPattern/README.md) for why there is no "without" version.
 3. Open [WithPattern](WithPattern/README.md) to see the pattern.
 
-Status: not implemented yet.
-
