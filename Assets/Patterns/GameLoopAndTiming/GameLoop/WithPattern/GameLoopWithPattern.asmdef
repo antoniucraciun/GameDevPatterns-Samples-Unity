@@ -1,6 +1,6 @@
 {
-    "name": "GameDevPatterns.Patterns.GameLoop.WithPattern",
-    "rootNamespace": "",
+    "name": "GameLoopWithPattern",
+    "rootNamespace": "GameDevPatterns.Patterns.GameLoop.WithPattern",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

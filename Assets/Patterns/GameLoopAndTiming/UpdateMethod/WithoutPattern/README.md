@@ -1,8 +1,11 @@
 # Update Method: without the pattern
 
-The feature written the way you would reasonably write it first, with no Update Method. It is not a strawman: it works, until it hits the problem on the [pattern page](https://antoniucraciun.github.io/GameDevPatterns/patterns/update-method).
+Scene: `UpdateMethodWithout.unity`
 
-Compare it with [WithPattern](../WithPattern/README.md): run both the same way, note where the behaviour differs, then look at which code had to change.
+One script, `WorldUpdater` on the **WorldUpdater** object, runs the whole world. It has a serialized reference to every object (guard, waypoints, pickup, door), keeps all their state (the guard's next waypoint, the door's progress), and moves all three in a single `Update`, one block per object.
 
-Status: not implemented yet.
+It works, and for three objects it is easy to read. This is the code you would reasonably write first, as the page's [Keep It Simple](https://antoniucraciun.github.io/GameDevPatterns/keep-it-simple) advice suggests. The cost shows when the world grows: every new kind of object means new fields, new state and a new block in this one script, which ends up knowing about everything.
 
+Compare it with [WithPattern](../WithPattern/README.md): the scenes behave the same, but there each object moves itself.
+
+Status: implemented in Unity 6000.6.8f1.
