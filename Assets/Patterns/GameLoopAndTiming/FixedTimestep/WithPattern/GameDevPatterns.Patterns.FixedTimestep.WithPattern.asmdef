@@ -1,0 +1,14 @@
+{
+    "name": "GameDevPatterns.Patterns.FixedTimestep.WithPattern",
+    "rootNamespace": "GameDevPatterns.Patterns.FixedTimestep.WithPattern",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

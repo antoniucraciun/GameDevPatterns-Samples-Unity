@@ -1,5 +1,7 @@
 ﻿<Solution>
+  <Project Path="GameDevPatterns.Patterns.FixedTimestep.WithPattern.csproj" />
   <Project Path="UpdateMethodWith.csproj" />
+  <Project Path="GameDevPatterns.Patterns.FixedTimestep.WithoutPattern.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
   <Project Path="GameLoopWithPattern.csproj" />
   <Project Path="UpdateMethodWithoutPattern.csproj" />
