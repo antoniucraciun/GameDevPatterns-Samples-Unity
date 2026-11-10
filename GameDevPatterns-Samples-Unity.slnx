@@ -1,6 +1,8 @@
 ﻿<Solution>
+  <Project Path="UpdateMethodWith.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
-  <Project Path="GameDevPatterns.Patterns.GameLoop.WithPattern.csproj" />
+  <Project Path="GameLoopWithPattern.csproj" />
+  <Project Path="UpdateMethodWithoutPattern.csproj" />
   <Project Path="GameDevPatterns.Tools.Editor.csproj" />
   <Project Path="Assembly-CSharp-Editor.csproj" />
 </Solution>

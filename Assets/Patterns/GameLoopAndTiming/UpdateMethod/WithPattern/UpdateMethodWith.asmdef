@@ -1,0 +1,14 @@
+{
+    "name": "UpdateMethodWith",
+    "rootNamespace": "GameDevPatterns.Patterns.UpdateMethod.WithPattern",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
